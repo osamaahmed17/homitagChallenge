@@ -43,18 +43,7 @@ class Service {
 
     async insert(data) {
         try {
-            if (config.mongoModel[this.model.collection.name].hasLocation) {
-                let location = {
-                    location: {
-                        type: "Point",
-                        coordinates: [data.long, data.lat]
-                    }
-                };
-                Object.assign(data, location);
-                delete data.long;
-                delete data.lat;
-
-            }
+     
             let item = await this.model.create(data);
             if (item)
                 return {

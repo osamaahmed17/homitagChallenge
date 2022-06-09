@@ -14,6 +14,8 @@ app.use(express.json());
 app.use(compression());
 const PORT = process.env.PORT || 3000
 app.use(express.json())
+
+// For Cors
 const corsOptions = {
   credentials: true,
   origin: true,
@@ -21,7 +23,6 @@ const corsOptions = {
   preflightContinue: false,
   optionsSuccessStatus: 204
 };
-
 app.options("*", cors(corsOptions));
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");

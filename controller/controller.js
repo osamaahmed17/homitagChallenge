@@ -17,11 +17,7 @@ class controller {
             data: [],
 
         };
-        
-
     }
-
-
 
     async getAll(req, res) {
         const getData = await this.service.getAll(req.query);
@@ -33,6 +29,7 @@ class controller {
 
     async insert(req, res) {
       
+        // Validation for requiest body
         const requestValidation = validations.verifySchema(
             schema[config.schema[this.constructor.name]],
             req.body
@@ -55,6 +52,8 @@ class controller {
 
     async update(req, res) {
 
+
+        // Validation for requiest body
         const requestValidation = validations.verifySchema(
             schema[config.schema[this.constructor.name]],
             req.body
