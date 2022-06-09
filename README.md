@@ -11,12 +11,14 @@ https://homitag-application.herokuapp.com/
 ### 
 ```
 
-### To run the application
+### To run the application on localhost
 ```sh
 npm start
 ```
 
-### To run the tests
+### To run the tests on localhost
+Make sure that the application is running on localhost and in another terminal, you can run this command.
 ```sh
 npm test
 ```
+
