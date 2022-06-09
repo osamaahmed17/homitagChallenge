@@ -11,7 +11,13 @@ https://homitag-application.herokuapp.com/
 ### 
 ```
 
+### To install the packages
+```sh
+npm install
+```
+
 ### To run the application on localhost
+Make sure that the packages are installed before running the application on localhost.
 ```sh
 npm start
 ```
