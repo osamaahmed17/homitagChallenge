@@ -3,7 +3,7 @@ Backend implementation for Homitag Challenge. This challenge consist of building
 
 
 ### To access the Postman collection:
-Make sure that you install postman from this [link](https://www.getpostman.com/collections/995dfff433e351078bf8)first 
+Make sure that you install postman from this [link](https://www.getpostman.com/collections/995dfff433e351078bf8) first 
 ```sh
 https://www.getpostman.com/collections/995dfff433e351078bf8 
 ```
