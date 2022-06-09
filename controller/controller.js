@@ -1,6 +1,6 @@
 const validations = require( '../validator/validations.js')
 const schema = require('../validator/schema.js')
-const config = require('../config/config.js')
+const config = require('../config/config')
 
 class controller {
     constructor(service) {
@@ -31,9 +31,7 @@ class controller {
 
 
     async insert(req, res) {
-        if (req.file) {
-            req.body.file = req.file;
-        }
+      
         const requestValidation = validations.verifySchema(
             schema[config.schema[this.constructor.name]],
             req.body
@@ -56,18 +54,17 @@ class controller {
 
     async update(req, res) {
 
-        if (req.file) {
-            req.body.file = req.file;
-        }
-
         const requestValidation = validations.verifySchema(
-            schema[config.updateSchema[this.constructor.name]],
+            schema[config.schema[this.constructor.name]],
             req.body
         );
+
+
         if (!requestValidation.success) {
-            console.log('error from request validation: %s' + requestValidation);
+            console.log('error from request validation: %s' + JSON.stringify(requestValidation));
             return res.status(400).send(requestValidation);
         }
+
         const {
             id
         } = req.params;

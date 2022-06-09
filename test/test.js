@@ -105,7 +105,7 @@ describe("Movies Test", function () {
   })
 });
 
-describe("Genre Test", function () {
+describe("Genres Test", function () {
   it("It should GET Genre", function (done) {
     server
       .get("/rest/api/v1/genre")
@@ -133,7 +133,7 @@ describe("Genre Test", function () {
       });
   });
 
-  it("It should DELETE movie by given ID", function (done) {
+  it("It should DELETE genre by given ID", function (done) {
     let genre = {
       "name": "Animation",
       "description": "English Cartoons"
@@ -157,7 +157,7 @@ describe("Genre Test", function () {
 
   });
 
-  it('It should UPDATE movie by given ID', (done) => {
+  it('It should UPDATE genre by given ID', (done) => {
     let genre = {
       "name": "Animation",
       "description": "English Cartoons"
@@ -169,12 +169,12 @@ describe("Genre Test", function () {
 
     let createdID
     server
-      .post('/rest/api/v1/movie')
+      .post('/rest/api/v1/genre')
       .send(genre)
       .expect("Content-type", /json/)
       .expect(201)
       .end(function (err, res) {
-        createdID = '/rest/api/v1/movie/' + res._body.data.item.id
+        createdID = '/rest/api/v1/genre/' + res._body.data.item.id
         server
           .put(createdID)
           .send(updatedGenre)

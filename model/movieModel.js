@@ -14,7 +14,7 @@ class movieModel {
         type: String,
       },
       releaseDate: {
-        type: Date,
+        type: String,
       },
       genres: {
         type: String,

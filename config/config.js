@@ -20,12 +20,12 @@ module.exports=
             },
  
             "schema": {
-                "movieController": "MOVIE_SCHEME",
-                "genreController": "GENRE_CONTROLLER"
+                "movieController": "MOVIE_SCHEMA",
+                "genreController": "GENRE_SCHEMA"
             },
             "updateSchema": {
-                "movieController": "MOVIE_SCHEME",
-                "genreController": "GENRE_CONTROLLER"
+                "movieController": "MOVIE_SCHEMA",
+                "genreController": "GENRE_SCHEMA"
         }
         
     }

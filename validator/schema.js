@@ -1,10 +1,10 @@
 module.exports =
 {
-  " MOVIE_SCHEMA": {
+  "MOVIE_SCHEMA": {
     "title": "Movie",
     "description": "Movie schema",
     "type": "object",
-    "additionalProperties": false,
+    "additionalProperties": true,
     "properties": {
       "name": {
         "type": "string"
@@ -13,7 +13,7 @@ module.exports =
         "type": "string",
       },
       "releaseDate": {
-        "type": "date",
+        "type": "string",
       },
       "genres": {
         "type": "string",
