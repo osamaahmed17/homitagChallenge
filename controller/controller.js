@@ -13,11 +13,12 @@ class controller {
 
         this.response = {
             success: true,
-            responseCode: "T01",
             message_en: "The transaction was completed successfully.",
             data: [],
 
         };
+        
+
     }
 
 
