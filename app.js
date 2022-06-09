@@ -1,13 +1,13 @@
 const cors = require("cors")
 const connectDb = require("./config/db.js")
+
 const express = require("express")
 const compression = require("compression");
 const dotenv = require("dotenv")
 const routes = require("./route/routes")
 
-
-
 connectDb()
+
 dotenv.config();
 const app = express()
 app.use(express.json());

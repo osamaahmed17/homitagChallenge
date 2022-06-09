@@ -11,7 +11,6 @@ const verifySchema = (Schema, requestedJSON) => {
     const validate = ajv.compile(Schema);
     const valid = validate(requestedJSON);
     if (!valid) {
-    console.log('requested JSON is INVALID!');
        console.log(validate.errors);
   
       // eslint-disable-next-line max-len
@@ -22,7 +21,6 @@ const verifySchema = (Schema, requestedJSON) => {
         }),
       };
     } else {
-       console.log('requested JSON is valid');
       result = {
         success: true,
         message: 'requested JSON is valid',

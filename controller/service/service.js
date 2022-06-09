@@ -42,8 +42,6 @@ class Service {
     }
 
     async insert(data) {
-        console.log(this.model.collection.name)
-
         try {
             if (config.mongoModel[this.model.collection.name].hasLocation) {
                 let location = {
@@ -57,7 +55,6 @@ class Service {
                 delete data.lat;
 
             }
-            console.log(data)
             let item = await this.model.create(data);
             if (item)
                 return {
